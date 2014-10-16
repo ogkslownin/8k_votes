@@ -13,7 +13,7 @@ public class Gauge : MonoBehaviour {
 		var count = input < limit ? input : limit;
 		var a = fact * count * b;
 		float c = (float)input / (float)limit;
-		float d = this.curve.Evaluate(c);
+		float d = StaticField.instance.curve.Evaluate(c);
 		f = d;
 		this.transform.localScale = Vector3.Lerp(new Vector3(10f, this.lowerLimitScale , 10f), new Vector3(10f, this.maximumLimitScale , 10f), f );
 	}
@@ -23,7 +23,6 @@ public class Gauge : MonoBehaviour {
 	public float lowerLimitScale;
 	public int limit = 4000;
 	public int input;
-	public AnimationCurve curve;
 	public void Vote( int i = 1 ){
 		input += i;
 	}
