@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   f: 0
   g: 0
-  maximumLimitScale: 5
+  maximumLimitScale: 3.79999995
   lowerLimitScale: 0
   limit: 4000
   input: 0
