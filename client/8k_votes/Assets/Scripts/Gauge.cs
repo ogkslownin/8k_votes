@@ -3,8 +3,10 @@ using System.Collections;
 
 public class Gauge : MonoBehaviour {
 
+	Vector3 defaultScale;
 	// Use this for initialization
 	void Start () {
+		this.defaultScale = this.transform.localScale;
 	}
 	// Update is called once per frame
 	void Update () {
@@ -15,7 +17,8 @@ public class Gauge : MonoBehaviour {
 		float c = (float)input / (float)limit;
 		float d = StaticField.instance.curve.Evaluate(c);
 		f = d;
-		this.transform.localScale = Vector3.Lerp(new Vector3(10f, this.lowerLimitScale , 10f), new Vector3(10f, this.maximumLimitScale , 10f), f );
+		f += g;
+		this.transform.localScale = Vector3.Lerp(new Vector3(this.defaultScale.x, this.lowerLimitScale , this.defaultScale.z), new Vector3(this.defaultScale.x, this.maximumLimitScale , this.defaultScale.y), f );
 	}
 	public float f = 0f;
 	public float g = 0f;
