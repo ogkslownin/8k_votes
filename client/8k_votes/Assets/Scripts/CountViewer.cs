@@ -2,19 +2,22 @@
 using System.Collections;
 
 public class CountViewer : MonoBehaviour {
-
 	[SerializeField] private TextMesh counter;
 	[SerializeField] private Transform CounterPos;
 	[SerializeField] private Gauge gauge;
 
 	public GameObject board;
 	public GameObject cube;
+
 	void Start(){
 		UpdateMaterial( this.MaterialNum );
 	}
 	void Update(){
 		counter.gameObject.transform.position = CounterPos.position;
 		counter.text = gauge.input.ToString();
+		var a = (float)gauge.input / ((float)gauge.limit / 2f);
+		a = a + 0.5f;
+		counter.color = new Color( 1f, 1f, 1f, a );
 		UpdateMaterial( this.MaterialNum );
 	}
 	public int MaterialNum = 1;
