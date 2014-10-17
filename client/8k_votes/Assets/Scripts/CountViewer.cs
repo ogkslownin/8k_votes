@@ -14,6 +14,8 @@ public class CountViewer : MonoBehaviour {
 	}
 	void Update(){
 		counter.gameObject.transform.position = CounterPos.position;
+		var b = counter.gameObject.transform.localPosition;
+		counter.gameObject.transform.localPosition = new Vector3(b.x, b.y + 0.008f , b.z);
 		counter.text = gauge.input.ToString();
 		var a = (float)gauge.input / ((float)gauge.limit / 2f);
 		a = a + 0.5f;
