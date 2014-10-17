@@ -19,7 +19,7 @@ public class CountViewer : MonoBehaviour {
 	}
 	public int MaterialNum = 1;
 	private int currentMaterialNum;
-	void UpdateMaterial(int i){
+	public void UpdateMaterial(int i){
 		if( i != currentMaterialNum ){
 			this.currentMaterialNum = i;
 			var boardMate = "Materials/Item" + i.ToString();
