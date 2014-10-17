@@ -10,7 +10,10 @@ public class CountViewer : MonoBehaviour {
 	public GameObject cube;
 
 	void Start(){
-		UpdateMaterial( this.MaterialNum );
+		UpdateMaterial( this.MaterialNum);
+		var m = "Materials/ScreenDraw0" + this.MaterialNum;
+		Debug.Log(m);
+		this.cube.renderer.material = Instantiate( Resources.Load( m ) ) as Material;
 	}
 	void Update(){
 		counter.gameObject.transform.position = CounterPos.position;
@@ -24,14 +27,15 @@ public class CountViewer : MonoBehaviour {
 	}
 	public int MaterialNum = 1;
 	private int currentMaterialNum;
-	public void UpdateMaterial(int i){
+	public void UpdateMaterial(int i ){
 		if( i != currentMaterialNum ){
+			Debug.Log("Force " + i.ToString() );
 			this.currentMaterialNum = i;
 			var boardMate = "Materials/Item" + i.ToString();
 			var cubeMate = "Materials/ScreenDraw0" + i.ToString();
 			Debug.Log( "b : " + boardMate + "\t c : " + cubeMate.ToString() );
 			this.board.renderer.material = Resources.Load(boardMate) as Material;
-			 this.cube.renderer.material = Resources.Load(cubeMate) as Material;
+			this.cube.renderer.material = Resources.Load(cubeMate) as Material;
 		}
 	}
 

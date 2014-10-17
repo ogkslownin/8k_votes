@@ -933,7 +933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   f: 0
   g: 0
-  maximumLimitScale: 5
+  maximumLimitScale: 3.79999995
   lowerLimitScale: 0
   limit: 4000
   input: 0
@@ -1345,7 +1345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   f: 0
   g: 0
-  maximumLimitScale: 5
+  maximumLimitScale: 3.79999995
   lowerLimitScale: 0
   limit: 4000
   input: 0
@@ -1535,7 +1535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   f: 0
   g: 0
-  maximumLimitScale: 5
+  maximumLimitScale: 3.79999995
   lowerLimitScale: 0
   limit: 4000
   input: 0
@@ -1588,7 +1588,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   f: 0
   g: 0
-  maximumLimitScale: 5
+  maximumLimitScale: 3.79999995
   lowerLimitScale: 0
   limit: 4000
   input: 0
@@ -2064,7 +2064,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   f: 0
   g: 0
-  maximumLimitScale: 5
+  maximumLimitScale: 3.79999995
   lowerLimitScale: 0
   limit: 4000
   input: 0
@@ -2152,6 +2152,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 961ccab09a1b14ea5b16b9841ca34ffa, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 61707a9346f3147648640fc0261b3f55, type: 2}
+    - target: {fileID: 11400002, guid: 961ccab09a1b14ea5b16b9841ca34ffa, type: 2}
+      propertyPath: MaterialNum
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300002, guid: 961ccab09a1b14ea5b16b9841ca34ffa, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d48c78cb3640842b8a77b703c0715763, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 961ccab09a1b14ea5b16b9841ca34ffa, type: 2}
   m_RootGameObject: {fileID: 1028376513}
