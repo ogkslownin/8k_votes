@@ -12,7 +12,7 @@ public class CountViewer : MonoBehaviour {
 	void Start(){
 		UpdateMaterial( this.MaterialNum);
 		var m = "Materials/ScreenDraw0" + this.MaterialNum;
-		Debug.Log(m);
+		//Debug.Log(m);
 		this.cube.renderer.material = Instantiate( Resources.Load( m ) ) as Material;
 	}
 	void Update(){
@@ -29,11 +29,11 @@ public class CountViewer : MonoBehaviour {
 	private int currentMaterialNum;
 	public void UpdateMaterial(int i ){
 		if( i != currentMaterialNum ){
-			Debug.Log("Force " + i.ToString() );
+			//Debug.Log("Force " + i.ToString() );
 			this.currentMaterialNum = i;
 			var boardMate = "Materials/Item" + i.ToString();
 			var cubeMate = "Materials/ScreenDraw0" + i.ToString();
-			Debug.Log( "b : " + boardMate + "\t c : " + cubeMate.ToString() );
+			//Debug.Log( "b : " + boardMate + "\t c : " + cubeMate.ToString() );
 			this.board.renderer.material = Resources.Load(boardMate) as Material;
 			this.cube.renderer.material = Resources.Load(cubeMate) as Material;
 		}

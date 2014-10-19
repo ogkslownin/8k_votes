@@ -8,4 +8,7 @@ public class GaugeInterface : MonoBehaviour {
 	public void Addition( int i ){
 		this.gauges[i].Vote(1);
 	}
+	public void ForceAddion( int i , int input ){
+		this.gauges[i].ForceVote(input);
+	}
 }

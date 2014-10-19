@@ -20,9 +20,9 @@ public class Gauge : MonoBehaviour {
 		f += g;
 		this.transform.localScale = Vector3.Lerp(new Vector3(this.defaultScale.x, this.lowerLimitScale , this.defaultScale.z), new Vector3(this.defaultScale.x, this.maximumLimitScale , this.defaultScale.y), f );
 
-		this.glaw -= 0.05f;
-		if( this.glaw < 0f ) this.glaw = 0f;
-		this.UpdateGlaw();
+		this.glow -= 0.05f;
+		if( this.glow < 0f ) this.glow = 0f;
+		this.Updateglow();
 	}
 	public float f = 0f;
 	public float g = 0f;
@@ -30,15 +30,19 @@ public class Gauge : MonoBehaviour {
 	public float lowerLimitScale;
 	public int limit = 4000;
 	public int input;
-	private float glaw = 0f;
+	private float glow = 0f;
 	public void Vote( int i = 1 ){
 		input += i;
-		glaw = 1f;
+		glow = 1f;
+	}
+	public void ForceVote( int i = 0 ){
+		input = i;
+		glow = 1f;
 	}
 	private float GetFact(){
 		return input / limit;
 	}
-	private void UpdateGlaw(){
-		this.renderer.material.SetFloat("_Glaw",this.glaw);
+	private void Updateglow(){
+		this.renderer.material.SetFloat("_Glow",this.glow);
 	}
 }

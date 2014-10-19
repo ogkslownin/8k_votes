@@ -22,19 +22,26 @@ public class Inputer : MonoBehaviour {
 		this.target = GameObject.Find("GaugeInterface").GetComponent<GaugeInterface>();
 	}
 	void Update(){
+		if( Util.instance.isDebugMode ) return;
 		for( var i = 0; i < 5 ; i ++ ){
-			if(Input.GetKeyDown(keys[i])){
+			if(Input.GetKeyDown(keys[i]) && LogIO.instance.isFileOpen == false ){
 				this.target.Addition(i);
 				this.Logging(i);
 			}
 		}
 	}
 	void Logging( int i ){
-		var log = DateTime.Now.ToString() + ",InputKey," + this.keys[i].ToString() ;
+		var log = DateTime.Now.ToString() + ",InputKey," + this.keys[i].ToString() + "\r\n" ;
+		LogIO.Log( log );
+# if UNITY_EDITOR
 		Debug.Log( log );
+# endif
 	}
-	void Logging( string _event ){
-		var log = DateTime.Now.ToString() + "," + _event + ",0";
-		Debug.Log(log);
+	void Logging( LogIO.LogEvent _event ){
+		var log = DateTime.Now.ToString() + "," + _event.ToString() + ",0" + "\r\n";
+		LogIO.Log( log );
+# if UNITY_EDITOR
+		Debug.Log( log );
+# endif
 	}
 }

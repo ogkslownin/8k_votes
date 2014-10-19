@@ -1,0 +1,21 @@
+﻿10/19/2014 19:39:45,Boot,0
+10/19/2014 19:39:47,InputKey,A
+10/19/2014 19:39:47,InputKey,S
+10/19/2014 19:39:47,InputKey,D
+10/19/2014 19:39:47,InputKey,F
+10/19/2014 19:39:47,InputKey,D
+10/19/2014 19:39:47,InputKey,F
+10/19/2014 19:39:47,InputKey,A
+10/19/2014 19:39:47,InputKey,S
+10/19/2014 19:39:47,InputKey,D
+10/19/2014 19:39:48,InputKey,F
+10/19/2014 19:39:48,InputKey,A
+10/19/2014 19:39:48,InputKey,S
+10/19/2014 19:39:48,InputKey,D
+10/19/2014 19:39:48,InputKey,F
+10/19/2014 19:39:48,InputKey,A
+10/19/2014 19:39:48,InputKey,S
+10/19/2014 19:39:48,InputKey,D
+10/19/2014 19:39:48,InputKey,F
+10/19/2014 19:39:48,InputKey,A
+10/19/2014 19:39:48,Error,System.IO.IsolatedStorage.IsolatedStorageException: Could not find file "/workspace/repos/8k_votes/build/mac/October_18_2014.log".
