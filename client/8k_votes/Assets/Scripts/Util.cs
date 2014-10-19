@@ -25,6 +25,7 @@ public class Util : MonoBehaviour {
 
 	GaugeInterface gaugeInterface;
 	void Awake(){
+		Screen.SetResolution(1920, 1080, true, 30);
 		if(instance == null){
 			instance = this;
 		}else{

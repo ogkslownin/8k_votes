@@ -126,8 +126,12 @@ public class LogIO : MonoBehaviour {
 		//Debug.Log( key );
 		switch( eventType ){
 			case LogEvent.InputKey:
+				var arr = key.ToCharArray();
+				var lastOne = arr[arr.Length -1 ].ToString();
 				if( this.keyToNumDict.ContainsKey( key ) )
 					this.AdditionTo( this.keyToNumDict[ key ] );
+				else if( this.keyToNumDict.ContainsKey( lastOne ) ) // Alpha1 とか記述される時用。
+					this.AdditionTo( this.keyToNumDict[ lastOne ] );
 				else
 					Debug.Log( key + " could not found." );
 			break;
