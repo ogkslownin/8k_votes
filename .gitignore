@@ -3,7 +3,6 @@
 /client/8k_votes/Temp
 /client/8k_votes/Temp/
 /client/8k_votes/Assets/NGUI/Examples*
-/build/*
 
 !*.asset
 *.csproj
